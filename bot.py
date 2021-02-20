@@ -1,10 +1,13 @@
 import discord
 from discord.ext import commands
+import json
+import random,os,asyncio
 
 intents = discord.Intents.default()
 intents.members = True
 
-
+with open('setting.json','r',encoding='utf8') as jfile:
+    jdata = json.load(jfile)
 
 bot = commands.Bot(command_prefix= '[', intents = intents)
 
@@ -22,4 +25,4 @@ async def on_member_remove(member):
     channel = bot.get_channel(812751941473271848)
     await channel.send(f'{member} leave!')
 
-bot.run('ODEyNjQwNTQwMDU4NTgzMDQw.YDDseg.OIybUkyn3lVCmjCNvJS_jk20gYw')
+bot.run(jdata['TOKEN'])
