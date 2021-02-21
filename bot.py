@@ -6,6 +6,7 @@ import random,os,asyncio
 intents = discord.Intents.default()
 intents.members = True
 
+#另外存取TOKEN
 with open('setting.json','r',encoding='utf8') as jfile:
     jdata = json.load(jfile)
 
