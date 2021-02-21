@@ -36,7 +36,7 @@ async def ping(ctx):
 
 @bot.command()
 async def 好吃(ctx):
-    pic = discord.File('I:\\GitHub\\Log_Bot\\panda.gif')
+    pic = discord.File(jdata['Panda'])
     await ctx.send(file= pic)
 
 bot.run(jdata['TOKEN'])
