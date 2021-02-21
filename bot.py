@@ -34,5 +34,9 @@ async def on_member_remove(member):
 async def ping(ctx):
     await ctx.send(f'{round(bot.latency*1000)} (ms)')
 
+@bot.command()
+async def 好吃(ctx):
+    pic = discord.File('I:\\GitHub\\Log_Bot\\panda.gif')
+    await ctx.send(file= pic)
 
 bot.run(jdata['TOKEN'])
