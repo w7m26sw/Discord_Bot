@@ -20,13 +20,13 @@ async def on_ready():
 #成員加入公會
 @bot.event
 async def on_member_join(member):
-    channel = bot.get_channel(812753320942108692)
+    channel = bot.get_channel(int(jdata['Welcome_channel']))
     await channel.send(f'{member} join!')
 
 #成員離開公會
 @bot.event 
 async def on_member_remove(member):
-    channel = bot.get_channel(812751941473271848)
+    channel = bot.get_channel(int(jdata['leave_channel']))
     await channel.send(f'{member} leave!')
 
 #ping 指令
