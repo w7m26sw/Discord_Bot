@@ -26,7 +26,7 @@ async def on_member_join(member):
 #成員離開公會
 @bot.event 
 async def on_member_remove(member):
-    channel = bot.get_channel(int(jdata['leave_channel']))
+    channel = bot.get_channel(int(jdata['Leave_channel']))
     await channel.send(f'{member} leave!')
 
 #ping 指令
