@@ -1,2 +1,6 @@
-discord.py==1.6.0
+django
+gunicorn
+django-heroku
+discord.py
+async-timeout==3.0.1
 Flask==1.1.2
