@@ -6,7 +6,7 @@ import os
 
 intents = discord.Intents.default()
 intents.members = True
-intents.presences = True
+intents.members = True
 
 #存取設定
 with open('setting.json','r',encoding='utf8') as jfile:
