@@ -4,7 +4,7 @@ from core.classes import Cog_Extension
 import json
 
 
-#另外存取TOKEN
+#另外存取setting.json
 with open('setting.json','r',encoding='utf8') as jfile:
     jdata = json.load(jfile)
 
@@ -28,8 +28,6 @@ class Eevent(Cog_Extension):
             await msg.channel.send('豬耳朵')
         if msg.content == '徐啟榮' and msg.author != self.bot.user:
             await msg.channel.send('甘蔗')
-        if message.content.startswith('audit'):
-            async for entry in guild.audit_logs(limit=1):
-                await msg.channel.send('{0.user} did {0.action} to {0.target}'.format(entry))
+
 def setup(bot):
     bot.add_cog(Eevent(bot))
