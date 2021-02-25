@@ -21,13 +21,6 @@ class Eevent(Cog_Extension):
         channel = self.bot.get_channel(int(jdata['Leave_channel']))
         await channel.send(f'{member} leave!')
 
-    #伺服器更新
-    @commands.Cog.listener() 
-    async def on_guild_update(self, before, after):
-        channel = self.bot.get_channel(int(jdata['Cmds_channel']))
-        await channel.send('log changed!')
-
-    
     #回應文字
     @commands.Cog.listener() 
     async def on_message(self, msg):
