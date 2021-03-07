@@ -32,6 +32,8 @@ class Eevent(Cog_Extension):
             await msg.channel.send('豬耳朵')
         if msg.content == '徐啟榮'
             await msg.channel.send('甘蔗')
+        if '王建博' in msg.content
+            await msg.channel.send('打保齡球')
 
 def setup(bot):
     bot.add_cog(Eevent(bot))
