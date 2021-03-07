@@ -24,10 +24,16 @@ class Eevent(Cog_Extension):
     #回應文字
     @commands.Cog.listener() 
     async def on_message(self, msg):
-        if msg.content == '花花' and msg.author != self.bot.user:
+        #如果是機器人自己發出的訊息跳開
+        if msg.author == self.bot.user
+            return
+
+        if msg.content == '花花'
             await msg.channel.send('豬耳朵')
-        if msg.content == '徐啟榮' and msg.author != self.bot.user:
+        if msg.content == '徐啟榮'
             await msg.channel.send('甘蔗')
+        if '王建博' in msg.content
+            await msg.channel.send('打保齡球')
 
 def setup(bot):
     bot.add_cog(Eevent(bot))
