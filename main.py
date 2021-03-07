@@ -6,6 +6,7 @@ import os
 
 intents = discord.Intents.default()
 intents.members = True
+intents.members = True
 
 #存取設定
 with open('setting.json','r',encoding='utf8') as jfile:
@@ -17,7 +18,7 @@ bot = commands.Bot(command_prefix= '!', intents = intents)
 @bot.event
 async def on_ready():
     print(">> Bot is online <<")
-     
+
 #load
 @bot.command()
 async def load(ctx, extension):
