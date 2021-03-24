@@ -33,7 +33,7 @@ class Eevent(Cog_Extension):
             await msg.channel.send('甘蔗')
             random_pic = random.choice(jdata['Jung'])
             pic = discord.File(random_pic)
-            await ctx.send(file= pic)
+            await msg.channel.send(file= pic)
 
 
 def setup(bot):
