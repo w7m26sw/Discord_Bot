@@ -2,7 +2,10 @@ import discord
 from discord.ext import commands
 from core.classes import Cog_Extension
 import json
+import random
 
+with open('setting.json','r',encoding='utf8') as jfile:
+    jdata = json.load(jfile)
 
 #另外存取setting.json
 with open('setting.json','r',encoding='utf8') as jfile:
@@ -28,6 +31,10 @@ class Eevent(Cog_Extension):
             await msg.channel.send('豬耳朵')
         if msg.content == '徐啟榮' and msg.author != self.bot.user:
             await msg.channel.send('甘蔗')
+            random_pic = random.choice(jdata['Jung'])
+            pic = discord.File(random_pic)
+            await ctx.send(file= pic)
+
 
 def setup(bot):
     bot.add_cog(Eevent(bot))
