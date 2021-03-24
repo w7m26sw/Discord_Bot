@@ -32,8 +32,7 @@ class Eevent(Cog_Extension):
         if msg.content == '徐啟榮' and msg.author != self.bot.user:
             await msg.channel.send('甘蔗')
             random_pic = random.choice(jdata['Jung'])
-            pic = discord.File(random_pic)
-            await msg.channel.send(file= pic)
+            await msg.channel.send(random_pic)
 
 
 def setup(bot):
